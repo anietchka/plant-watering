@@ -1,0 +1,7 @@
+<h2><%= @plant.name %></h2>
+<p><%= @plant.photo %></p>
+<% if @plant.alive == true %>
+  <p>Bravo, votre plante est toujours vivante!</p>
+  <% else %>
+  <p>Dommage, votre plante est morte</p>
+<% end %>
