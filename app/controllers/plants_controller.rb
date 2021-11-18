@@ -13,13 +13,14 @@ class PlantsController < ApplicationController
 
   def create
     @plant = Plant.new(plant_params)
-    @plant.save
+    @plant.user = current_user
+    @plant.save!
     redirect_to plant_path(@plant)
   end
 
   private
 
   def plant_params
-    params.require(:plant).permit(:name, :rytme, :photo)
+    params.require(:plant).permit(:name, :rythm, :photo)
   end
 end

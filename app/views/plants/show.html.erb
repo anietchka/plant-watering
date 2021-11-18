@@ -1,5 +1,5 @@
 <h2><%= @plant.name %></h2>
-<p><%= @plant.photo %></p>
+<%= cl_image_tag(@plant.photo.key) %>
 <% if @plant.alive == true %>
   <p>Bravo, votre plante est toujours vivante!</p>
   <% else %>
