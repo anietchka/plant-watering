@@ -1,8 +1,11 @@
 <h1>Mes Plantes</h1>
-<ul>
-  <% @plants.each do |plant| %>
-    <li><%= plant.name %></li>
+<% @plants.each do |plant| %>
+  <%= link_to(plant_path(plant)) do %>
+    <div class="card-plant">
+    <%= cl_image_tag(plant.photo.key) %>
+    <h3><%= plant.name %></h3>
+    </div>
   <% end %>
-</ul>
+<% end %>
 
 <p><%= link_to "Ajouter une plante", new_plant_path %></p>
