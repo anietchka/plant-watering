@@ -1,13 +1,16 @@
 class PlantsController < ApplicationController
   def index
     @plants = Plant.all
+    @user = current_user
   end
 
   def show
+    @user = current_user
     @plant = Plant.find(params[:id])
   end
 
   def new
+    @user = current_user
     @plant = Plant.new
   end
 
@@ -19,6 +22,7 @@ class PlantsController < ApplicationController
   end
 
   def destroy
+    @user = current_user
     @plant = Plant.find(params[:id])
     @plant.destroy
     redirect_to plants_path
