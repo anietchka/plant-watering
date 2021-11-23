@@ -21,7 +21,7 @@
 
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
-          <% if @user.photo != nil %>
+          <% if @user.photo.key != nil %>
             <%= cl_image_tag @user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% else %>
             <%= image_tag "default-user-image", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
