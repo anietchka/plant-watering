@@ -1,4 +1,6 @@
 <div class="container">
-  <h1>Mon profil</h1>
+
+  <h1><%= current_user.username %></h1>
+
   <%= link_to "Editer mes informations", edit_user_registration_path %>
 </div>

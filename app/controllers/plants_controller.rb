@@ -1,6 +1,6 @@
 class PlantsController < ApplicationController
   def index
-    @plants = Plant.all
+    @plants = Plant.where(user: current_user)
   end
 
   def show
