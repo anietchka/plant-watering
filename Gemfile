@@ -33,7 +33,7 @@ gem 'bootstrap', '~> 5.0.0.beta2'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'devise'
-# gem 'devise-i18n'
+gem 'devise-i18n'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
 
