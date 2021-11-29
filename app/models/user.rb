@@ -6,5 +6,5 @@ class User < ApplicationRecord
 
   has_many :plants, dependent: :destroy
   has_one_attached :photo
-  validates :username, uniqueness: { message: `%{value} is already taken` }
+  validates :username, uniqueness: { message: "is already taken" }
 end
