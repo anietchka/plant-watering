@@ -1,11 +1,15 @@
-<h1>Mes Plantes</h1>
-<% @plants.each do |plant| %>
-  <%= link_to(plant_path(plant)) do %>
-    <div class="card-plant">
-    <%= cl_image_tag(plant.photo.key) %>
-    <h3><%= plant.name %></h3>
-    </div>
-  <% end %>
-<% end %>
+<div class="container">
+  <h1>Mes Plantes</h1>
+  <div class="cards-plants">
+    <% @plants.each do |plant| %>
+      <div class="card-plant">
+        <%= link_to(plant_path(plant)) do %>
+          <%= cl_image_tag(plant.photo.key) %>
+          <h3><%= plant.name %></h3>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
 
-<p><%= link_to "Ajouter une plante", new_plant_path %></p>
+  <p><%= link_to "Ajouter une plante", new_plant_path %></p>
+</div>
