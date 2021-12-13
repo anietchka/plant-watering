@@ -1,6 +1,6 @@
 <h2><%= @plant.name %></h2>
 <%= cl_image_tag(@plant.photo.key) %>
-<p><%= @plant.next_watered_at %></p>
+<p>Prochain arosage : <%= @plant.next_watered_at %></p>
 <% if @plant.alive == true %>
   <%= link_to(watered_plant_path, method: :patch) do%>
       <div class="btn btn-ghost">Arroser <%= @plant.name %></div>
