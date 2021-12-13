@@ -1,1 +1,12 @@
-<h1>Au secours, on a soif!</h1>
+<div class="container">
+  <h1>Au secours, on a soif!</h1>
+  <div class="cards-plants">
+    <% @plants.each do |plant| %>
+      <div class="card-plant">
+        <%= link_to(plant_path(plant)) do %>
+          <%= cl_image_tag(plant.photo.key) %>
+          <h3><%= plant.name %></h3>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
